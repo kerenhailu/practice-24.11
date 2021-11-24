@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script
+      src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js "
+      crossorigin="anonymous"
+    >
+    
+</script>
+<body>
+    <main id="main"></main>
+    <script type="text/babel">
+
+        const TagMain=document.getElementById("main")
+        function Hello(){
+            return <div>hello</div>
+        }
+
+        function GetName(props){
+            return <div>Hello {props.name}</div>
+        }
+        function GetNameAndAge(props){
+            return <div> {props.name},{props.age}</div>
+        }
+        function GetImgAndVideo(props){
+            return <div><img src={props.img}></img>
+                <source src={props.video} type="video/mp4"></source></div>
+        }
+        ReactDOM.render(
+            <div>
+                <Hello/>
+                <GetName name="keren"/>
+                <GetName name="tikva"/>
+                <GetName name="eden"/>
+                <GetName name="yafit"/>
+                <GetName name="yosi"/>
+                <GetName name="avi"/>
+                <GetName name="dani"/>
+                <GetName name="haim"/>
+                <GetName name="lior"/>
+                <GetName name="matan"/>
+
+                <GetNameAndAge name="keren" age={23}/>
+                <GetNameAndAge name="keren" age={23}/>
+                <GetNameAndAge name="keren" age={23}/>
+                <GetNameAndAge name="keren" age={23}/>
+                <GetNameAndAge name="keren" age={23}/>
+                <GetNameAndAge name="keren" age={23}/>
+                <GetNameAndAge name="keren" age={23}/>
+                <GetNameAndAge name="keren" age={23}/>
+                <GetNameAndAge name="keren" age={23}/>
+                <GetNameAndAge name="keren" age={23}/>
+
+                <GetImgAndVideo img="https://cdn.pixabay.com/photo/2021/11/13/23/06/tree-6792528__340.jpg" video="https://cdn.pixabay.com/photo/2015/01/08/18/24/children-593313__480.jpg"/>
+
+                </div>
+                ,TagMain);
+    </script>
+</body>
